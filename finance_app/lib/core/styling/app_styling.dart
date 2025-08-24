@@ -34,4 +34,10 @@ class AppStyling {
     fontWeight: FontWeight.w500,
     color: AppColor.secondaryColor,
   );
+  static TextStyle black15BoldStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColor.blackColor,
+  );
 }
