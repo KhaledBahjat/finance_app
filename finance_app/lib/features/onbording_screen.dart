@@ -1,3 +1,4 @@
+import 'package:finance_app/core/routing/app_routs.dart';
 import 'package:finance_app/core/styling/app_assets.dart';
 import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
@@ -5,6 +6,7 @@ import 'package:finance_app/core/widgets/primary_button_widget.dart';
 import 'package:finance_app/core/widgets/primary_outline_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class OnbordingScreen extends StatelessWidget {
   const OnbordingScreen({super.key});
@@ -25,7 +27,9 @@ class OnbordingScreen extends StatelessWidget {
             width: 331.w,
             height: 56.h,
             buttonText: 'Login',
-            onPress: () {},
+            onPress: () {
+              GoRouter.of(context).pushNamed(AppRoutes.loginScreen);
+            },
           ),
           SizedBox(
             height: 15.h,
