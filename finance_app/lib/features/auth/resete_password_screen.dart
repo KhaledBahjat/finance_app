@@ -1,20 +1,17 @@
-import 'package:finance_app/core/routing/app_routs.dart';
-import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/core/widgets/custom_textfield.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
 import 'package:finance_app/features/auth/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
-class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({super.key});
+class ResetPassword extends StatefulWidget {
+  const ResetPassword({super.key});
   @override
-  State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
+  State<ResetPassword> createState() => _ResetPasswordState();
 }
 
-class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
+class _ResetPasswordState extends State<ResetPassword> {
   @override
   @override
   Widget build(BuildContext context) {
@@ -39,12 +36,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Forgot Password?',
+                          'Create new password',
                           style: AppStyling.primaryHeadlineTextStyle,
                         ),
                         SizedBox(height: 10.h),
                         Text(
-                          'Don\'t worry! It occurs. Please enter the email address linked with your account.',
+                          'Your new password must be unique from those previously used.',
                           style: AppStyling.grey15MediumStyle,
                         ),
                       ],
@@ -55,47 +52,39 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   CustomTextfield(
                     height: 80.h,
-                    hintText: 'Enter your email',
+                    hintText: 'New Password',
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
+                        return 'Please enter your new password';
                       }
                       return null;
                     },
                   ),
-
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  CustomTextfield(
+                    height: 80.h,
+                    hintText: 'Confirm Password',
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please confirm your password';
+                      }
+                      return null;
+                    },
+                  ),
                   SizedBox(
                     height: 38.h,
                   ),
                   PrimaryButtonWidget(
                     width: 331.w,
                     height: 56.h,
-                    buttonText: 'Send Code',
+                    buttonText: 'Reset Password',
                     onPress: () {},
                   ),
 
                   SizedBox(
-                    height: 361.h,
-                  ),
-                  Center(
-                    child: InkWell(
-                      onTap: () =>
-                          GoRouter.of(context).pushNamed(AppRoutes.loginScreen),
-                      child: RichText(
-                        text: TextSpan(
-                          text: 'Remember Password? ',
-                          style: AppStyling.black15BoldStyle.copyWith(
-                            color: AppColor.primaryColor,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: 'Login',
-                              style: AppStyling.black15BoldStyle,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    height: 337.h,
                   ),
                 ],
               ),
