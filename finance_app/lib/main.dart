@@ -1,4 +1,5 @@
 import 'package:finance_app/core/styling/theme_data.dart';
+import 'package:finance_app/core/widgets/custom_textfield.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
 import 'package:finance_app/core/widgets/primary_outline_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,18 @@ class TestScreen extends StatelessWidget {
             ),
             PrimaryOutlineButtonWidget(
               onPress: () {},
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            CustomTextfield(),
+              SizedBox(
+              height: 20.h,
+            ),
+            CustomTextfield(
+              hintText: 'Password',
+              isPassword: true,
+             suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.visibility,color: Colors.grey,),),
             ),
           ],
         ),

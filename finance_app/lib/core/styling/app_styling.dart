@@ -28,4 +28,10 @@ class AppStyling {
     fontWeight: FontWeight.w500,
     color: AppColor.greyColor,
   );
+  static TextStyle grey15MediumStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColor.secondaryColor,
+  );
 }
