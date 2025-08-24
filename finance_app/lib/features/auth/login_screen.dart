@@ -100,10 +100,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: Text(
-                      'Forgot Password?',
-                      style: AppStyling.black15BoldStyle.copyWith(
-                        color: AppColor.darkGreyColor,
+                    child: InkWell(
+                      onTap: () => GoRouter.of(
+                        context,
+                      ).pushNamed(AppRoutes.forgotPasswordScreen),
+                      child: Text(
+                        'Forgot Password?',
+                        style: AppStyling.black15BoldStyle.copyWith(
+                          color: AppColor.darkGreyColor,
+                        ),
                       ),
                     ),
                   ),
@@ -132,7 +137,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Center(
                     child: InkWell(
-                      onTap: () => GoRouter.of(context).pushNamed(AppRoutes.registerScreen),
+                      onTap: () => GoRouter.of(
+                        context,
+                      ).pushNamed(AppRoutes.registerScreen),
                       child: RichText(
                         text: TextSpan(
                           text: 'Don’t have an account?',
