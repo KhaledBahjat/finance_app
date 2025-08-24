@@ -40,4 +40,10 @@ class AppStyling {
     fontWeight: FontWeight.bold,
     color: AppColor.blackColor,
   );
+  static TextStyle grey14SemiBoldStyle = TextStyle(
+    fontFamily: AppFonts.mainFontName,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColor.darkGreyColor,
+  );
 }
