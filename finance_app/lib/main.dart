@@ -1,6 +1,5 @@
 import 'package:finance_app/core/routing/router_generator.dart';
 import 'package:finance_app/core/styling/theme_data.dart';
-import 'package:finance_app/features/onbording_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,6 +15,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (context, child) {
         return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           routerConfig: RouterGenerator.goRouter,
         );
@@ -23,5 +23,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
