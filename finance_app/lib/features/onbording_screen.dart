@@ -38,7 +38,9 @@ class OnbordingScreen extends StatelessWidget {
             width: 331.w,
             height: 56.h,
             buttonText: 'Register',
-            onPress: () {},
+            onPress: () {
+              GoRouter.of(context).pushNamed(AppRoutes.registerScreen);
+            },
           ),
           SizedBox(
             height: 46.h,

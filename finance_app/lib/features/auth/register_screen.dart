@@ -10,27 +10,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  bool isObscured = true;
-  late TextEditingController emailController;
-  late TextEditingController passwordController;
+class _RegisterScreenState extends State<RegisterScreen> {
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
-
   @override
   void initState() {
     super.initState();
+    usernameController = TextEditingController();
     emailController = TextEditingController();
     passwordController = TextEditingController();
+    confirmPasswordController = TextEditingController();
   }
-
-  @override
+@override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -49,9 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 28.h),
 
                   SizedBox(
-                    width: 280.w,
+                    width: 331.w,
                     child: Text(
-                      'Welcome back! \nAgain!',
+                      'Hello! Register to get started',
                       style: AppStyling.primaryHeadlineTextStyle,
                     ),
                   ),
@@ -60,63 +60,72 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   CustomTextfield(
                     height: 80.h,
-                    hintText: 'Enter your email',
-                    controller: emailController,
+                    controller: usernameController,
+                    hintText: 'Username',
                     validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Email is required';
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your username';
                       }
                       return null;
                     },
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 8.h,
                   ),
                   CustomTextfield(
                     height: 80.h,
+                    hintText: 'Email',
+                    controller: emailController,
                     validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Password is required';
-                      }
-                      if (value.length < 8) {
-                        return 'Password must be at least 8 characters';
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your email';
                       }
                       return null;
                     },
-                    controller: passwordController,
-                    hintText: 'Enter your password',
-                    isPassword: isObscured,
-                    suffixIcon: IconButton(
-                      onPressed: () => setState(() {
-                        isObscured = !isObscured;
-                      }),
-                      icon: isObscured
-                          ? Icon(Icons.visibility_off)
-                          : Icon(Icons.visibility),
-                    ),
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 8.h,
                   ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      'Forgot Password?',
-                      style: AppStyling.black15BoldStyle.copyWith(
-                        color: AppColor.darkGreyColor,
-                      ),
-                    ),
+                  CustomTextfield(
+                    height: 80.h,
+                    hintText: 'Password',
+                    controller: passwordController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your password';
+                      }
+                      if(value.length<8){
+                        return 'Password must be at least 8 characters long';
+                      }
+                      return null;
+                    },
                   ),
-
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  CustomTextfield(
+                    height: 80.h,
+                    hintText: 'Confirm Password',
+                    controller: confirmPasswordController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please confirm your password';
+                      }
+                      if (value != passwordController.text) {
+                        return 'Passwords do not match';
+                      }
+                      return null;
+                    },
+                  ),
                   SizedBox(
                     height: 30.h,
                   ),
                   PrimaryButtonWidget(
                     width: 331.w,
                     height: 56.h,
-                    buttonText: 'Login',
+                    buttonText: 'Register',
                     onPress: () {
-                      if (formKey.currentState!.validate()) {}
+                      if(formKey.currentState!.validate()){}
                     },
                   ),
                   SizedBox(
@@ -132,16 +141,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Center(
                     child: InkWell(
-                      onTap: () => GoRouter.of(context).pushNamed(AppRoutes.registerScreen),
+                      onTap: () =>
+                          GoRouter.of(context).pushNamed(AppRoutes.loginScreen),
                       child: RichText(
                         text: TextSpan(
-                          text: 'Don’t have an account?',
+                          text: 'Already have an account? ',
                           style: AppStyling.black15BoldStyle.copyWith(
                             color: AppColor.primaryColor,
                           ),
                           children: [
                             TextSpan(
-                              text: 'Register Now',
+                              text: 'Login Now',
                               style: AppStyling.black15BoldStyle,
                             ),
                           ],
