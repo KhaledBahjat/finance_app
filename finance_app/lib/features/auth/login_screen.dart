@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: InkWell(
                       onTap: () => GoRouter.of(
                         context,
-                      ).pushNamed(AppRoutes.resetPasswordScreen),
+                      ).pushNamed(AppRoutes.passwordChangeScreen),
                       child: Text(
                         'Forgot Password?',
                         style: AppStyling.black15BoldStyle.copyWith(

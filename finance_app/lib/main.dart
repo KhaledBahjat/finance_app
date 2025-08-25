@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           routerConfig: RouterGenerator.goRouter,
+       
         );
+        
+        
       },
     );
   }

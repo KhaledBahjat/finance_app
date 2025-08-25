@@ -5,13 +5,8 @@ import 'package:finance_app/features/auth/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ResetPassword extends StatefulWidget {
+class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
-  @override
-  State<ResetPassword> createState() => _ResetPasswordState();
-}
-
-class _ResetPasswordState extends State<ResetPassword> {
   @override
   @override
   Widget build(BuildContext context) {
