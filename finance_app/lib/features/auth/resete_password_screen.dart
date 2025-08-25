@@ -78,7 +78,7 @@ class ResetPassword extends StatelessWidget {
                     height: 56.h,
                     buttonText: 'Reset Password',
                     onPress: () =>
-                        GoRouter.of(context).pushNamed(AppRoutes.loginScreen),
+                        GoRouter.of(context).pushNamed(AppRoutes.passwordChangeScreen),
                   ),
 
                   SizedBox(

@@ -96,7 +96,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     // log(otpController.text);
                     GoRouter.of(
                       context,
-                    ).pushNamed(AppRoutes.passwordChangeScreen);
+                    ).pushNamed(AppRoutes.resetPasswordScreen);
                   },
                 ),
 
