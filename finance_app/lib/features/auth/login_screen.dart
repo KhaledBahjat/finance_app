@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   SizedBox(height: 12.h),
 
-                  BackButtonWidgt(),
+                  const BackButtonWidgt(),
 
                   SizedBox(height: 28.h),
 
@@ -91,8 +91,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         isObscured = !isObscured;
                       }),
                       icon: isObscured
-                          ? Icon(Icons.visibility_off)
-                          : Icon(Icons.visibility),
+                          ? const Icon(Icons.visibility_off)
+                          : const Icon(Icons.visibility),
                     ),
                   ),
                   SizedBox(
@@ -131,11 +131,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 35.h,
                   ),
-                  OrLoginWidget(),
+                  const OrLoginWidget(),
                   SizedBox(
                     height: 22.h,
                   ),
-                  SocialMediaIcons(),
+                  const SocialMediaIcons(),
                   SizedBox(
                     height: 155.h,
                   ),

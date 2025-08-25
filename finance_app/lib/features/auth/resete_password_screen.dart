@@ -23,7 +23,7 @@ class ResetPassword extends StatelessWidget {
                 children: [
                   SizedBox(height: 12.h),
 
-                  BackButtonWidgt(),
+                  const BackButtonWidgt(),
 
                   SizedBox(height: 28.h),
 

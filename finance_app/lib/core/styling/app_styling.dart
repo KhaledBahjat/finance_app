@@ -48,8 +48,9 @@ class AppStyling {
   );
   static TextStyle errorTextStyle = TextStyle(
     fontFamily: AppFonts.mainFontName,
-    fontSize: 12.sp,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w500,
     color: AppColor.errorColor,
   );
+  
 }

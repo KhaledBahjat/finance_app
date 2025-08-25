@@ -14,7 +14,7 @@ class OrLoginWidget extends StatelessWidget {
       children: [
         SizedBox(
           width: 100.w,
-          child: Divider(),
+          child: const Divider(),
         ),
         SizedBox(
           width: 12.w,
@@ -30,7 +30,7 @@ class OrLoginWidget extends StatelessWidget {
         ),
         SizedBox(
           width: 100.w,
-          child: Divider(),
+          child: const Divider(),
         ),
       ],
     );

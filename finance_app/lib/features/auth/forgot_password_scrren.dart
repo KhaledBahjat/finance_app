@@ -29,7 +29,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 children: [
                   SizedBox(height: 12.h),
 
-                  BackButtonWidgt(),
+                  const BackButtonWidgt(),
 
                   SizedBox(height: 28.h),
 

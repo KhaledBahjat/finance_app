@@ -28,12 +28,14 @@ class CustomTextfield extends StatelessWidget {
       width: width ?? 331.w,
       height: height ?? 56.h,
       child: TextFormField(
+        
         controller: controller,
         validator: validator,
         obscureText: isPassword ?? false,
         autofocus: false,
         cursorColor: AppColor.primaryColor,
         decoration: InputDecoration(
+          errorStyle: AppStyling.errorTextStyle,
           suffixIcon: suffixIcon,
           contentPadding: EdgeInsets.symmetric(
             horizontal: 18.w,

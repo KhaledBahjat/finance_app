@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:finance_app/core/routing/app_routs.dart';
 import 'package:finance_app/core/styling/app_color.dart';
@@ -37,7 +36,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
               children: [
                 SizedBox(height: 12.h),
 
-                BackButtonWidgt(),
+                const BackButtonWidgt(),
 
                 SizedBox(height: 28.h),
 

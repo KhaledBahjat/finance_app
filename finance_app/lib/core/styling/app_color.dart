@@ -11,4 +11,5 @@ class AppColor {
   static const Color boldColor = Color(0xff202955);
   static const Color darkGreyColor = Color(0xff6A707C);
   static const Color errorColor = Color(0xffFF4D4D);
+  static const Color bottomNavBarColor = Color(0xff9CA4AB);
 }

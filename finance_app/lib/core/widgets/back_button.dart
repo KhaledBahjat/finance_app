@@ -16,7 +16,7 @@ class BackButtonWidgt extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.transparent,
           border: Border.all(
-            color: Color(0xffE8ECF4),
+            color: const Color(0xffE8ECF4),
             width: 1.w,
           ),
           borderRadius: BorderRadius.circular(16.r),

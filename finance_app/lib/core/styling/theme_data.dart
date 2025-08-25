@@ -12,7 +12,7 @@ class AppTheme {
       titleLarge: AppStyling.primaryHeadlineTextStyle,
       titleMedium: AppStyling.subtitleTextStyle,
     ),
-    buttonTheme: ButtonThemeData(
+    buttonTheme: const ButtonThemeData(
       buttonColor: AppColor.primaryColor,
       disabledColor: AppColor.secondaryColor,
     ),

@@ -45,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 children: [
                   SizedBox(height: 12.h),
 
-                  BackButtonWidgt(),
+                  const BackButtonWidgt(),
 
                   SizedBox(height: 28.h),
 
@@ -132,11 +132,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(
                     height: 35.h,
                   ),
-                  OrLoginWidget(),
+                  const OrLoginWidget(),
                   SizedBox(
                     height: 22.h,
                   ),
-                  SocialMediaIcons(),
+                  const SocialMediaIcons(),
                   SizedBox(
                     height: 155.h,
                   ),
