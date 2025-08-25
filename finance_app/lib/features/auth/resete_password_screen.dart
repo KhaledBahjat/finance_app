@@ -1,9 +1,11 @@
+import 'package:finance_app/core/routing/app_routs.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/core/widgets/custom_textfield.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
-import 'package:finance_app/features/auth/widgets/back_button.dart';
+import 'package:finance_app/core/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
@@ -75,7 +77,8 @@ class ResetPassword extends StatelessWidget {
                     width: 331.w,
                     height: 56.h,
                     buttonText: 'Reset Password',
-                    onPress: () {},
+                    onPress: () =>
+                        GoRouter.of(context).pushNamed(AppRoutes.loginScreen),
                   ),
 
                   SizedBox(

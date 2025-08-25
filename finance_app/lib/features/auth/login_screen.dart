@@ -3,7 +3,7 @@ import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/core/widgets/custom_textfield.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
-import 'package:finance_app/features/auth/widgets/back_button.dart';
+import 'package:finance_app/core/widgets/back_button.dart';
 import 'package:finance_app/features/auth/widgets/or_login_widget.dart';
 import 'package:finance_app/features/auth/widgets/social_media_widgets.dart';
 import 'package:flutter/material.dart';
@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: InkWell(
                       onTap: () => GoRouter.of(
                         context,
-                      ).pushNamed(AppRoutes.passwordChangeScreen),
+                      ).pushNamed(AppRoutes.forgotPasswordScreen),
                       child: Text(
                         'Forgot Password?',
                         style: AppStyling.black15BoldStyle.copyWith(
@@ -121,7 +121,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 56.h,
                     buttonText: 'Login',
                     onPress: () {
-                      if (formKey.currentState!.validate()) {}
+                      if (formKey.currentState!.validate()) {
+                        GoRouter.of(
+                          context,
+                        ).pushNamed(AppRoutes.verificationScreen);
+                      }
                     },
                   ),
                   SizedBox(

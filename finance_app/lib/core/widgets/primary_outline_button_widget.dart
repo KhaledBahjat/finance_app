@@ -42,7 +42,6 @@ class PrimaryOutlineButtonWidget extends StatelessWidget {
       onPressed: onPress,
 
       child: Text(
-        
         buttonText ?? 'Button',
         style: TextStyle(
           color: textColor ?? AppColor.primaryColor,

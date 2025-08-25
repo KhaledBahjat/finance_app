@@ -1,4 +1,3 @@
-
 class AppAssets {
   static const String onBoardingImage1 = 'assets/images/on1.png';
   static const String line = 'assets/images/line.png';

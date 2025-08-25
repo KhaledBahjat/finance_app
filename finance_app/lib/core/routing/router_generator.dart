@@ -4,6 +4,7 @@ import 'package:finance_app/features/auth/login_screen.dart';
 import 'package:finance_app/features/auth/password_change_screen.dart';
 import 'package:finance_app/features/auth/register_screen.dart';
 import 'package:finance_app/features/auth/resete_password_screen.dart';
+import 'package:finance_app/features/auth/verfication_password.dart';
 import 'package:finance_app/features/onbording_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -41,6 +42,11 @@ class RouterGenerator {
         path: AppRoutes.passwordChangeScreen,
         name: AppRoutes.passwordChangeScreen,
         builder: (context, state) => PasswordChangeScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.verificationScreen,
+        name: AppRoutes.verificationScreen,
+        builder: (context, state) => VerificationScreen(),
       ),
     ],
   );

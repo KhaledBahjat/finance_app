@@ -3,7 +3,7 @@ import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/core/widgets/custom_textfield.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
-import 'package:finance_app/features/auth/widgets/back_button.dart';
+import 'package:finance_app/core/widgets/back_button.dart';
 import 'package:finance_app/features/auth/widgets/or_login_widget.dart';
 import 'package:finance_app/features/auth/widgets/social_media_widgets.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
     passwordController = TextEditingController();
     confirmPasswordController = TextEditingController();
   }
-@override
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -94,7 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Please enter your password';
                       }
-                      if(value.length<8){
+                      if (value.length < 8) {
                         return 'Password must be at least 8 characters long';
                       }
                       return null;
@@ -125,7 +126,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 56.h,
                     buttonText: 'Register',
                     onPress: () {
-                      if(formKey.currentState!.validate()){}
+                      if (formKey.currentState!.validate()) {}
                     },
                   ),
                   SizedBox(
