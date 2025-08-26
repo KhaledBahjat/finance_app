@@ -16,4 +16,5 @@ class AppAssets {
   static const String arrowBackBlack = 'assets/icons/arrow-back.svg';
   static const String listIcon = 'assets/icons/list.svg';
   static const String visaLogo = 'assets/images/visa.png';
+  static const String editIcon = 'assets/icons/editicon.svg';
 }

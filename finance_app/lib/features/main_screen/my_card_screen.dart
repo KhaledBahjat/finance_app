@@ -14,7 +14,7 @@ class MyCardScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: CustomTitel(),
+        title: CustomTitel(title: 'All Cards', backIconPath: AppAssets.arrowBackBlack, leadingIconPath: AppAssets.listIcon),
       ),
 
       body: Center(

@@ -1,3 +1,4 @@
+import 'package:finance_app/core/widgets/profile_picture_widget.dart';
 import 'package:finance_app/features/main_screen/widgets/carousel_widget.dart';
 import 'package:finance_app/features/main_screen/widgets/notfication_widget.dart';
 import 'package:finance_app/features/main_screen/widgets/our_service_widget.dart';
@@ -21,14 +22,7 @@ class HomeScreen extends StatelessWidget {
 
               Row(
                 children: [
-                  ClipOval(
-                    child: Image.asset(
-                      'assets/images/logo.jpg',
-                      height: 48.h,
-                      width: 48.w,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  ProfialPic(),
                   SizedBox(
                     width: 11.w,
                   ),
@@ -57,3 +51,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

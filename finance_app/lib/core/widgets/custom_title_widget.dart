@@ -7,28 +7,33 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomTitel extends StatelessWidget {
   const CustomTitel({
     super.key,
+    required this.title,
+    required this.backIconPath,
+    required this.leadingIconPath,
   });
-
+final String title;
+final String backIconPath;
+final String leadingIconPath;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         BackButtonWidget(
-          iconPath: AppAssets.arrowBackBlack,
+          iconPath: backIconPath,
           width: 24.w,
           height: 24.h,
           onPressed: () {},
         ),
         Text(
-          'All Cards',
+          title,
           style: AppStyling.grey14SemiBoldStyle.copyWith(
             color: Colors.black,
             fontSize: 18.sp,
           ),
         ),
         BackButtonWidget(
-          iconPath: AppAssets.listIcon,
+          iconPath: leadingIconPath,
           onPressed: () {},
           width: 24.w,
           height: 24.h,
