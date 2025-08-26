@@ -35,19 +35,20 @@ class _CarouselWidgetState extends State<CarouselWidget> {
 
           items: [
             CardItem(
-              backgroundColor: AppColor.primaryColor,
-              cardType: 'X-Card',
-              balance: '3209',
-              expiryDate: '11/25',
-              cardNumber: '4545',
-            ),
-            CardItem(
               backgroundColor: Color(0xff4151a6),
               cardType: 'M-Card',
               balance: '23400',
               expiryDate: '12/24',
               cardNumber: '3434',
             ),
+            CardItem(
+              backgroundColor: AppColor.primaryColor,
+              cardType: 'X-Card',
+              balance: '3209',
+              expiryDate: '11/25',
+              cardNumber: '4545',
+            ),
+
             CardItem(
               backgroundColor: AppColor.primaryColor,
               cardType: 'X-Card',
@@ -66,6 +67,8 @@ class _CarouselWidgetState extends State<CarouselWidget> {
           decorator: DotsDecorator(
             size: const Size.square(9.0),
             activeSize: const Size(18.0, 9.0),
+            spacing: EdgeInsets.symmetric(horizontal: 4),
+            color: Color(0xffE3E9ED),
             activeShape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5.0),
             ),
