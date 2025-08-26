@@ -19,9 +19,23 @@ class CarouselWidget extends StatelessWidget {
       ),
 
       items: [
-        CardItem(backgroundColor: Color(0xff4151a6), cardType: 'M-Card'),
-        CardItem(backgroundColor: AppColor.primaryColor, cardType: 'X-Card'),
+          CardItem(
+          backgroundColor: AppColor.primaryColor,
+          cardType: 'X-Card',
+          balance: '3209',
+          expiryDate: '11/25',
+          cardNumber: '4545',
+        ),
+        CardItem(
+          backgroundColor: Color(0xff4151a6),
+          cardType: 'M-Card',
+          balance: '23400',
+          expiryDate: '12/24',
+          cardNumber: '3434',
+        ),
+      
       ],
+      
     );
   }
 }

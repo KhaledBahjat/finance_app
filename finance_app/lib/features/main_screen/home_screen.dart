@@ -32,8 +32,6 @@ class HomeScreen extends StatelessWidget {
                   width: 11.w,
                 ),
 
-               
-               
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -53,19 +51,21 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              
+
                 Spacer(),
-               
+
                 TopProfileNotifcationWidget(),
-             
               ],
             ),
-           
+
             SizedBox(
               height: 24.h,
             ),
-           
+
             CarouselWidget(),
+            SizedBox(
+              height: 16.h,
+            ),
             
           ],
         ),

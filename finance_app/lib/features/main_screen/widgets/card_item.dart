@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CardItem extends StatelessWidget {
-  const CardItem({super.key, required this.backgroundColor, required this.cardType});
+  const CardItem({super.key, required this.backgroundColor, required this.cardType, required this.balance, required this.expiryDate, required this.cardNumber});
   final Color backgroundColor;
   final String cardType;
+  final String balance;
+  final String expiryDate;
+  final String cardNumber;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -83,7 +86,7 @@ class CardItem extends StatelessWidget {
                 height: 8.h,
               ),
               Text(
-                '23400 EG',
+                '$balance EG',
                 style: AppStyling.grey15MediumStyle.copyWith(
                   color: Color(0xffFDFDFD),
                   fontSize: 24.sp,
@@ -96,7 +99,7 @@ class CardItem extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    '****  3434',
+                    '****  $cardNumber',
                     style: AppStyling.grey15MediumStyle.copyWith(
                       color: Color(0xffFDFDFD),
                       fontSize: 16.sp,
@@ -106,7 +109,7 @@ class CardItem extends StatelessWidget {
                     width: 41.w,
                   ),
                   Text(
-                    '12/24',
+                    expiryDate,
                     style: AppStyling.grey15MediumStyle.copyWith(
                       color: Color(0xffFDFDFD),
                       fontSize: 12.sp,
