@@ -4,19 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CardItem extends StatelessWidget {
-  const CardItem({super.key, required this.backgroundColor, required this.cardType, required this.balance, required this.expiryDate, required this.cardNumber});
+  const CardItem({
+    super.key,
+    required this.backgroundColor,
+    required this.cardType,
+    required this.balance,
+    required this.expiryDate,
+    required this.cardNumber,
+    this.width,
+    this.height,
+  });
   final Color backgroundColor;
   final String cardType;
   final String balance;
   final String expiryDate;
   final String cardNumber;
+  final double? width;
+  final double? height;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          width: 207.w,
-          height: 263.h,
+          width: width ?? 207.w,
+          height: height ?? 263.h,
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(16.r),
@@ -73,7 +84,7 @@ class CardItem extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 57.h,
+                height: 20.h,
               ),
               Text(
                 'Balance',

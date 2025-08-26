@@ -6,10 +6,10 @@ class SocialMediaButton extends StatelessWidget {
   const SocialMediaButton({
     super.key,
     this.onTap,
-    required this.iconPath,
+    required this.imagePath,
   });
   final void Function()? onTap;
-  final String iconPath;
+  final String imagePath;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -28,7 +28,7 @@ class SocialMediaButton extends StatelessWidget {
         child: Align(
           child: Center(
             child: SvgPicture.asset(
-              iconPath,
+              imagePath,
               width: 24.w,
               height: 24.h,
             ),

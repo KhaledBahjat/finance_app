@@ -2,6 +2,7 @@ import 'package:finance_app/core/styling/app_assets.dart';
 import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/features/main_screen/home_screen.dart';
+import 'package:finance_app/features/main_screen/my_card_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,11 +28,7 @@ class _MainScreenState extends State<MainScreen> {
       width: double.infinity,
       height: double.infinity,
     ),
-    Container(
-      color: Colors.yellow,
-      width: double.infinity,
-      height: double.infinity,
-    ),
+    MyCardScreen(),
     Container(
       color: Colors.orange,
       width: double.infinity,

@@ -1,5 +1,6 @@
 
 import 'package:finance_app/core/routing/app_routs.dart';
+import 'package:finance_app/core/styling/app_assets.dart';
 import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:finance_app/core/widgets/primary_button_widget.dart';
@@ -36,7 +37,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
               children: [
                 SizedBox(height: 12.h),
 
-                const BackButtonWidgt(),
+                BackButtonWidget(iconPath: AppAssets.arrowBack, onPressed: () {
+                  Navigator.of(context).pop();
+                }),
 
                 SizedBox(height: 28.h),
 

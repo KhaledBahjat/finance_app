@@ -12,10 +12,9 @@ class SocialMediaIcons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SocialMediaButton(iconPath: AppAssets.facebookLogo, onTap: () {}),
-        SocialMediaButton(iconPath: AppAssets.googleLogo, onTap: () {}),
-
-        SocialMediaButton(iconPath: AppAssets.appleLogo, onTap: () {}),
+        SocialMediaButton(imagePath: AppAssets.facebookLogo, onTap: () {}),
+        SocialMediaButton(imagePath: AppAssets.googleLogo, onTap: () {}),
+        SocialMediaButton(imagePath: AppAssets.appleLogo, onTap: () {}),
       ],
     );
   }

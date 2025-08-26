@@ -1,4 +1,3 @@
-import 'package:finance_app/core/styling/app_color.dart';
 import 'package:finance_app/core/styling/app_styling.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
